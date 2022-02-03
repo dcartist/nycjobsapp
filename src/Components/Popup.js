@@ -14,19 +14,22 @@ console.log(props)
       </Button>
 
       <Modal show={show} onHide={handleClose} 
-        dialogClassName="modal-90w">
+        dialogClassName="modal-90w" size="lg">
         <Modal.Header closeButton>
-          <Modal.Title>{props.data.facility_name}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
             <Mapalt longitude={props.data.longitude} latitude={props.data.latitude}></Mapalt>
-            {props.data.street_address}</Modal.Body>
+            <Modal.Title>{props.data.facility_name}</Modal.Title>
+            <p>{props.data.street_address}</p>
+            <p>{props.data.city} {props.data.zip}</p>
+            <p>{props.data.phone_number_s}</p>
+            </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
           <Button variant="primary" onClick={handleClose}>
-            Save Changes
+            Done
           </Button>
         </Modal.Footer>
       </Modal>
