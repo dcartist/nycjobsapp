@@ -55,6 +55,15 @@
   left: 0;
   right: 0;
 }
+.mapalt-container {
+  position: relative;
+  height: 30vh;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
 
 .marker {
   /* background-image: url('svg/marker.svg'); */

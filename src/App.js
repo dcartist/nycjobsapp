@@ -2,7 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 import data from './data.json'
 import JobSites from './Pages/JobSites'
-
+import './bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import ReactMap from './Components/Reactmap'
 import Popup from './Components/Popup'
 function App() {
@@ -12,7 +13,7 @@ function App() {
   return (
     <div className="App">
       test
-      {/* <ReactMap></ReactMap> */}
+      <ReactMap></ReactMap>
    {/* {process.env.REACT_APP_TRIAL} */}
    {/* <GMap options={options} style={{width: '100%', minHeight: '320px'}} /> */}
 {/* <JobSites></JobSites> */}

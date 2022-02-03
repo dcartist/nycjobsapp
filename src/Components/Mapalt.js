@@ -12,7 +12,7 @@ export default function Mapalt(props) {
             container: mapContainerRef.current,
             style: 'mapbox://styles/dcartist/cjeu2tofp0wcs2rnbhooahyy5',
             center: [props.longitude, props.latitude],
-            zoom: 10,
+            zoom: 14,
           });
 
           const mapMarker =  new mapboxgl.Marker({
@@ -22,5 +22,5 @@ export default function Mapalt(props) {
             .addTo(map);
           return () => map.remove();
         }, []); 
-  return <div className="map-container" ref={mapContainerRef} />;
+  return <div className="mapalt-container" ref={mapContainerRef} />;
 }
