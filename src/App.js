@@ -1,7 +1,6 @@
-import logo from './logo.svg';
+
 import './App.css';
 import data from './data.json'
-import JobSites from './Pages/JobSites'
 import './bootstrap.min.css';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import ReactMap from './Components/Reactmap'

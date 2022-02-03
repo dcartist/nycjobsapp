@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from 'react';
+// import mapboxgl from 'mapbox-gl/dist/mapbox-gl-csp';
 import mapboxgl from 'mapbox-gl';
 
 mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_ACCESS_TOKEN;

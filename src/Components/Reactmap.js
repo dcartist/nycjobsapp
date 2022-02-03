@@ -1,10 +1,12 @@
 import React, { useRef, useEffect } from 'react';
 import mapboxgl from 'mapbox-gl';
+// import MapboxWorker from 'worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker'; // Load worker code separately with worker-loader
 import data from "../data.json"
 import '../App.css';
 
 mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_ACCESS_TOKEN;
 
+// mapboxgl.workerClass = MapboxWorker; 
 const Reactmap = () => {
   const mapContainerRef = useRef(null);
   useEffect(() => {
