@@ -77,3 +77,8 @@
 .modalInfo {
   display: grid;
 }
+
+.mainMap{
+  display:flex;
+  justify-content: center;
+}

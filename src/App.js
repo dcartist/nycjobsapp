@@ -11,10 +11,10 @@ function App() {
 
   return (
     <div className="App">
-      test
-      <ReactMap></ReactMap>
+      <div className="mainMap"><ReactMap></ReactMap></div>
+      
    {/* {process.env.REACT_APP_TRIAL} */}
-   {/* <GMap options={options} style={{width: '100%', minHeight: '320px'}} /> */}
+  
 {/* <JobSites></JobSites> */}
 
     {data.map(item=> <Popup data={item}></Popup>)}

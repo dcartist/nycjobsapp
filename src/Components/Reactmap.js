@@ -14,9 +14,11 @@ const Reactmap = () => {
       container: mapContainerRef.current,
       style: 'mapbox://styles/dcartist/cjeu2tofp0wcs2rnbhooahyy5',
       center: [-73.935242, 40.730610],
-      zoom: 10,
+      zoom: 10.8,
+      pitch: 50,
     });
 
+    map.scrollZoom.disable();
 
     // const marker = new mapboxgl.Marker()
     // .setLngLat([-73.918421, 40.839604])

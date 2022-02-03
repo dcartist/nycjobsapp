@@ -6,7 +6,7 @@ const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-console.log(props)
+console.log(props.data.phone_number_s)
   return (
     <>
       <Button variant="primary" onClick={handleShow}>
@@ -22,7 +22,9 @@ console.log(props)
             <Modal.Title>{props.data.facility_name}</Modal.Title>
             <p>{props.data.street_address}</p>
             <p>{props.data.city} {props.data.zip}</p>
+            <hr></hr>
             <p>{props.data.phone_number_s}</p>
+            <p>{props.data.nta}</p>
             </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
