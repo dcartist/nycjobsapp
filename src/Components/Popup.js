@@ -6,7 +6,6 @@ const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-console.log(props.data.phone_number_s)
   return (
     <>
       <Button variant="primary" onClick={handleShow}>
@@ -18,20 +17,18 @@ console.log(props.data.phone_number_s)
         <Modal.Header closeButton>
         </Modal.Header>
         <Modal.Body>
-            <Mapalt longitude={props.data.longitude} latitude={props.data.latitude}></Mapalt>
+            <Mapalt {...props.data} longitude={props.data.longitude} latitude={props.data.latitude}></Mapalt>
             <Modal.Title>{props.data.facility_name}</Modal.Title>
+            <hr></hr>
             <p>{props.data.street_address}</p>
             <p>{props.data.city} {props.data.zip}</p>
-            <hr></hr>
             <p>{props.data.phone_number_s}</p>
             <p>{props.data.nta}</p>
             </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
+      
           <Button variant="primary" onClick={handleClose}>
-            Done
+            Close
           </Button>
         </Modal.Footer>
       </Modal>

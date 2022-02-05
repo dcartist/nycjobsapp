@@ -13,7 +13,7 @@ const Reactmap = () => {
     const map = new mapboxgl.Map({
       container: mapContainerRef.current,
       style: 'mapbox://styles/dcartist/cjeu2tofp0wcs2rnbhooahyy5',
-      center: [-73.935242, 40.730610],
+      center: [-73.935242, 40.680610],
       zoom: 10.8,
       pitch: 50,
     });
@@ -26,14 +26,14 @@ const Reactmap = () => {
     const makers = data.map(item=>{
         new mapboxgl.Marker({
             color: "red",
-            draggable: true
+            draggable: false
             }).setLngLat([item.longitude, item.latitude])
             .addTo(map);
 
     })
     const marker = new mapboxgl.Marker({
         color: "red",
-        draggable: true
+        draggable: false
         }).setLngLat([-73.918421, 40.639604])
         .addTo(map);
     // add navigation control (the +/- zoom buttons)

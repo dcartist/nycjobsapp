@@ -48,8 +48,10 @@
 
 .map-container {
   position: relative;
-  height: 80vh;
-  width: 90%;
+  height: 100vh;
+  width: 100vw;
+  /* height: 80vh;
+  width: 90%; */
   top: 0;
   bottom: 0;
   left: 0;
@@ -57,14 +59,22 @@
 }
 .mapalt-container {
   position: relative;
-  height: 30vh;
+  height: 50vh;
   width: 100%;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
 }
+.marker-label p{
+  text-align: center !important;
 
+}
+.marker-label{
+ 
+  display: flex;
+  justify-content: center;
+}
 .marker {
   /* background-image: url('svg/marker.svg'); */
   background-size: cover;
