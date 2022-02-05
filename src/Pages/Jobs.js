@@ -36,13 +36,13 @@ function thedecoded(s){
         fetchData();
     }, []);
 if (jobs.length == 0 ){
-  return <div> <hr></hr> JOBS GO HERE
+  return <div> <hr></hr> Loading...
       <hr></hr>
   </div>;
 
 } else {
   
-  return <div> <hr></hr> <h1 className="dark">JOB LISTING</h1>
+  return <div> <hr></hr> <h1 className="dark text-white">JOB LISTING</h1>
   <hr></hr><div className="job-listing">
   {jobs.map(job => (
    <div className="job-block">
