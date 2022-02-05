@@ -2,6 +2,7 @@
   text-align: center;
   background-color: black;
   color: white;
+  min-height: 100vh;
 }
 #deckgl-overlay{
   position: relative !important;
@@ -47,9 +48,21 @@
 
 .job-listing{
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 15px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin: auto;
+  width: 90%;
 
+}
+.job-listing h3{
+color: white;
+}
+.job-block{
+  /* border-bottom: 1px solid white; */
+  
+  margin: 25px 50px;
+  text-align: left;
+  
 }
 .map-container {
   position: relative;
