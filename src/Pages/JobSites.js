@@ -34,17 +34,15 @@ export default function JobSites() {
     new LineLayer({id: 'line-layer', data})
   ];
   return <div>
-    <div>  <DeckGL
+    {/* <div>  <DeckGL
       initialViewState={INITIAL_VIEW_STATE}
       controller={false}
       layers={layers}>
       <MapView id="map" width="100%" controller={true} style={{position:"relative"}}>
         <StaticMap mapboxApiAccessToken={MAPBOX_ACCESS_TOKEN} style={{position:"relative"}}/>
-
-        {/* <Pins data={jobdata}  /> */}
       </MapView>
       <FirstPersonView width="100%" x="100%" fovy={50} style={{position:"relative"}} />
-    </DeckGL></div>
+    </DeckGL></div> */}
     
 {/* <DeckGL
       initialViewState={INITIAL_VIEW_STATE}

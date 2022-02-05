@@ -5,6 +5,7 @@ import './bootstrap.min.css';
 import "animate.css/animate.min.css";
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import Navbar from './Components/Navigation'
+import JobList from './Pages/Jobs'
 import Home from './Pages/Home'
 import {
   BrowserRouter as Router,
@@ -21,6 +22,7 @@ import { Parallax, Background } from 'react-parallax';
 
 import About from './Pages/About'
 import Jobs from './Pages/Jobs'
+import JobCenters from './Pages/JobCenters'
 function App() {
   
   // console.log(data)
@@ -34,6 +36,8 @@ function App() {
         <Route index element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/" element={<Home />} />
+          <Route path="/centers" element={<JobCenters />} />
+          <Route path="/jobs" element={<JobList />} />
         {/* <Route path="teams" element={<Teams />}>
           <Route path=":teamId" element={<Team />} />
           <Route index element={<LeagueStandings />} />

@@ -2,32 +2,29 @@ import React from 'react';
 import {Navbar, Button, Container, NavDropdown, Nav} from 'react-bootstrap'
 import {Link} from 'react-router-dom'
 import { LinkContainer } from 'react-router-bootstrap'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {AiFillGithub, AiOutlineMail} from 'react-icons/ai'
+
 export default function Navigation() {
   return <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark" sticky="top" >
   <Container>
-  <Navbar.Brand href="#home">NYC JOBS 22</Navbar.Brand>
+  <LinkContainer to="/"><Navbar.Brand href="#home">NYC JOBS 22</Navbar.Brand></LinkContainer>
+
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="me-auto">
-    <LinkContainer to="/about">
-    <Nav.Link>About</Nav.Link>
-</LinkContainer>
-<LinkContainer to="/"><Nav.Link to="/">Features</Nav.Link></LinkContainer>
+<LinkContainer to="/"><Nav.Link to="/">Home</Nav.Link></LinkContainer>
+<LinkContainer to="/about"><Nav.Link>About</Nav.Link></LinkContainer>
+<LinkContainer to="/centers"><Nav.Link>Job Centers</Nav.Link></LinkContainer>
+<LinkContainer to="/jobs"><Nav.Link>Job Listing</Nav.Link></LinkContainer>
   
-      
-      <Nav.Link href="#pricing">Pricing</Nav.Link>
-      <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-        <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-        <NavDropdown.Divider />
-        <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-      </NavDropdown>
     </Nav>
     <Nav>
       <Nav.Link href="#deets">More deets</Nav.Link>
       <Nav.Link eventKey={2} href="#memes">
         Dank memes
+        <AiFillGithub></AiFillGithub>
+        <AiOutlineMail></AiOutlineMail>
       </Nav.Link>
     </Nav>
   </Navbar.Collapse>
