@@ -1,5 +1,7 @@
 import React from 'react';
-import {Navbar, Container, NavDropdown, Nav} from 'react-bootstrap'
+import {Navbar, Button, Container, NavDropdown, Nav} from 'react-bootstrap'
+import {Link} from 'react-router-dom'
+import { LinkContainer } from 'react-router-bootstrap'
 export default function Navigation() {
   return <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark" sticky="top" >
   <Container>
@@ -7,7 +9,12 @@ export default function Navigation() {
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="me-auto">
-      <Nav.Link href="#features">Features</Nav.Link>
+    <LinkContainer to="/about">
+    <Nav.Link>About</Nav.Link>
+</LinkContainer>
+<LinkContainer to="/"><Nav.Link to="/">Features</Nav.Link></LinkContainer>
+  
+      
       <Nav.Link href="#pricing">Pricing</Nav.Link>
       <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
         <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
