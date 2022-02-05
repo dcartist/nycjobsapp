@@ -4,6 +4,10 @@ import {Card} from "react-bootstrap"
 
 export default function Jobs() {
     const [jobs, setjobs] = useState([]);
+    function capitalizeFirstLetter(s) {
+      return s && s[0].toUpperCase() + s.slice(1);
+    }
+    
     useEffect(() => {
         // const SomeURL = "https://api.adviceslip.com/advice";
         const SomeURL = process.env.REACT_APP_JobsAPI;
@@ -31,19 +35,19 @@ if (jobs.length == 0 ){
 
 } else {
   return <div> <hr></hr> <h1 className="dark">JOB LISTING</h1>
-  <hr></hr>
+  <hr></hr><div className="job-listing">
   {jobs.map(job => (
     <Card bg={'dark'}>
-    <Card.Header as="h5">{job.business_title}</Card.Header>
+    <Card.Header as="p">{capitalizeFirstLetter(job.business_title)}</Card.Header>
     <Card.Body>
-      <Card.Title>Special title treatment</Card.Title>
+      {/* <Card.Title>Special title treatment</Card.Title> */}
       {/* <Card.Text>
         With supporting text below as a natural lead-in to additional content.
       </Card.Text> */}
       {/* <Button variant="primary">Go somewhere</Button> */}
     </Card.Body>
   </Card>
-  ))}
+  ))}</div>
   MORE JOBS
 </div>;
 }

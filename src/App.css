@@ -45,7 +45,12 @@
   }
 }
 
+.job-listing{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
 
+}
 .map-container {
   position: relative;
   height: 100vh;
