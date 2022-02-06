@@ -1,10 +1,12 @@
 import React, {useState} from 'react';
 import data from '../data.json'
 import Popup from '../Components/Popup'
+
+import Mapalt from "../Components/Mapalt"
 import { Parallax, Background } from 'react-parallax';
 import JobsMapped from "../Components/JobsMapped"
 import { AnimationOnScroll } from 'react-animation-on-scroll';
-import {Button} from 'react-bootstrap'
+import {Button, Card, Modal} from 'react-bootstrap'
 
 import nycPhoto from '../Image/nycmapbackground.png'
 
@@ -40,7 +42,19 @@ unique.push("Clear")
         {/* <AnimationOnScroll animateIn="anumate__fadeIn"></AnimationOnScroll> */}
     </ul>
         {/* <AnimationOnScroll animateIn="anumate__fadeIn"></AnimationOnScroll> */}
-        <AnimationOnScroll animateIn="animate__fadeIn">{jobcenters.map(item=> <Popup data={item}></Popup>)}</AnimationOnScroll>
+        <AnimationOnScroll animateIn="animate__fadeIn">
+          <div className="job-center-base">
+          {jobcenters.map(item=> <div>
+          {/* <Mapalt {...item}></Mapalt> */}
+    <h2 className="text-white">{item.facility_name}</h2>
+    {item.nta}
+       <p>{item.street_address}<br></br>{item.city}, {item.zip_code}</p>
+       <hr></hr>
+            <p>{item.phone_number_s}</p>
+      <Popup data={item}></Popup>
+  </div>)}</div>
+  
+  </AnimationOnScroll>
   
   {/* <JobsMapped data={jobcenters} {...jobcenters}></JobsMapped> */}
   </div>;

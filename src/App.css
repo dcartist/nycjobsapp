@@ -87,6 +87,23 @@ color: white;
   left: 0;
   right: 0;
 }
+
+.job-center-base{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: auto;
+  width:100%;
+  column-gap: 50px;
+  row-gap: 50px;
+  justify-content: center;
+  padding: 20px;
+
+}
+
+.job-center-base hr{
+  width: 50%;
+  margin: 10px auto;
+}
 .mapalt-container {
   position: relative;
   height: 50vh;
