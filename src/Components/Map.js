@@ -9,7 +9,6 @@ class Map extends Component {
         }
     }
     render() {
-        // console.log(this.)
         let nyplace= `${this.props.newLocation}, New York, NY`
         let Location = nyplace.split(" ").join("+");
         
