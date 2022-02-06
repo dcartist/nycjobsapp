@@ -21,10 +21,10 @@ export default function Navigation() {
   
     </Nav>
     <Nav>
-      <Nav.Link href="#deets"><BiWorld></BiWorld></Nav.Link>
-      <Nav.Link href="#deets"><AiFillGithub></AiFillGithub></Nav.Link>
+      <Nav.Link href="#deets"><BiWorld className="icon-nav" ></BiWorld></Nav.Link>
+      <Nav.Link href="#deets"><AiFillGithub className="icon-nav"></AiFillGithub></Nav.Link>
       <Nav.Link eventKey={2} href="#memes">
-        <AiOutlineMail></AiOutlineMail>
+        <AiOutlineMail className="icon-nav"></AiOutlineMail>
       </Nav.Link>
     </Nav>
   </Navbar.Collapse>

@@ -17,12 +17,18 @@ export default function About() {
             <h1 className="  text-white mb-3 mt-5">About</h1>
             <p className="lead text-white">NYC Jobs 22 is a website built for the developer week hackathon to display New York City Open Data jobs.</p>
 
-              
+              <hr></hr>
+            <h2 className="lead text-white"> NYC Jobs Centers</h2>
             <p>
             Job Centers - List of Job Centers that offer temporary financial assistance, SNAP, and Medicaid to eligible individuals.
 https://data.cityofnewyork.us/Business/Directory-Of-Job-Centers/9d9t-bmk7
             </p>
-
+            <hr></hr>
+            <h2 className="lead text-white">NYC Jobs</h2>
+            <p>
+             - This dataset contains current job postings available on the City of New York’s official jobs site (http://www.nyc.gov/html/careers/html/search/search.shtml). Internal postings available to city employees and external postings available to the general public are included.
+            https://data.cityofnewyork.us/City-Government/NYC-Jobs/kpav-sd4t
+            </p>
 
             </AnimationOnScroll>
 

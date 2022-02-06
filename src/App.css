@@ -45,7 +45,9 @@
     transform: rotate(360deg);
   }
 }
-
+.icon-nav{
+  font-size: 25px;
+}
 .job-listing{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -66,7 +68,7 @@ color: white;
 }
 
 .aboutSections{
-  min-height: 90vh;
+  min-height: 85vh;
 }
 .map-container {
   position: relative;

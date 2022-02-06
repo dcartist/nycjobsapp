@@ -59,8 +59,6 @@ export default function JobSites() {
               
             ></iframe> */}
   
-      ------
-      {jobdata.map((item, index)=> <div key={index}> {item.facility_name} {item.street_address} </div>)}
-
+      
   </div>;
 }
