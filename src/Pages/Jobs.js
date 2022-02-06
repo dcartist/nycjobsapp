@@ -54,7 +54,6 @@ function searchQueryFunction(e){
           try {
             axios.get(SomeURL, {headers: {'content-type': 'application/x-www-form-urlencoded;charset=utf-8'}})
       .then(res => {
-        console.log(res.data);  
         setfulljobs(res.data);
         setjobs(res.data)
       })
@@ -67,7 +66,8 @@ function searchQueryFunction(e){
         fetchData();
     }, []);
 if (jobs.length == 0 ){
-  return <div> <hr></hr> Loading...
+  return <div> <hr></hr> 
+  <h1 className="text-white">Loading...</h1>
       <hr></hr>
   </div>;
 
@@ -80,7 +80,7 @@ if (jobs.length == 0 ){
     <Form.Label>Search by job title</Form.Label>
     <Form.Control size="lg" type="text" placeholder="Search Job Title" onChange={e => searchQueryFunction(e)} onKeyDown={e => enterDisabler(e)}  />
     <Form.Text className="text-muted">
-      Search Job Title
+      {jobs.length} results
     </Form.Text>
   </Form.Group>
    </Form>
