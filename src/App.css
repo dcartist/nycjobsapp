@@ -94,9 +94,9 @@ color: white;
   margin: auto;
   width:100%;
   column-gap: 50px;
-  row-gap: 50px;
+  row-gap: 90px;
   justify-content: center;
-  padding: 20px;
+  padding: 30px 30px 100px; 
 
 }
 
