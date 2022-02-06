@@ -70,6 +70,12 @@ color: white;
 .aboutSections{
   min-height: 85vh;
 }
+.bouroughs{
+  display: inline;
+  padding: 10px;
+  color: white;
+}
+
 .map-container {
   position: relative;
   height: 100vh;
