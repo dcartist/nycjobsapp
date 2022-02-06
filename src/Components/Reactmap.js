@@ -1,12 +1,9 @@
 import React, { useRef, useEffect } from 'react';
 import mapboxgl from 'mapbox-gl';
-// import MapboxWorker from 'worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker'; // Load worker code separately with worker-loader
 import data from "../data.json"
 import '../App.css';
 
 mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_ACCESS_TOKEN;
-
-// mapboxgl.workerClass = MapboxWorker; 
 const Reactmap = () => {
   const mapContainerRef = useRef(null);
   useEffect(() => {
@@ -20,9 +17,6 @@ const Reactmap = () => {
 
     map.scrollZoom.disable();
 
-    // const marker = new mapboxgl.Marker()
-    // .setLngLat([-73.918421, 40.839604])
-    // .addTo(map);
     const makers = data.map(item=>{
         new mapboxgl.Marker({
             color: "red",

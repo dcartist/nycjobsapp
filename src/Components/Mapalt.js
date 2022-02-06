@@ -10,7 +10,6 @@ mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_ACCESS_TOKEN;
 // eslint-disable-next-line import/no-webpack-loader-syntax
 mapboxgl.workerClass = require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
 export default function Mapalt(props) {
-        console.log(props)
         const newlat = props.latitude + 0.00500
         const mapContainerRef = useRef(null);
         useEffect(() => {
