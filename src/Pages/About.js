@@ -34,6 +34,7 @@ https://data.cityofnewyork.us/Business/Directory-Of-Job-Centers/9d9t-bmk7
       
         </div>
       </div>
+      <hr></hr>
       <section class="pt-5 pb-5 aboutSections">
       <AnimationOnScroll animateIn="animate__fadeIn" delay={300}>
       <div class="container">
