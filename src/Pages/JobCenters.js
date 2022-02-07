@@ -4,9 +4,8 @@ import Popup from '../Components/Popup'
 
 import Mapalt from "../Components/Mapalt"
 import { Parallax, Background } from 'react-parallax';
-import JobsMapped from "../Components/JobsMapped"
 import { AnimationOnScroll } from 'react-animation-on-scroll';
-import {Button, Card, Modal} from 'react-bootstrap'
+import {Button} from 'react-bootstrap'
 
 import nycPhoto from '../Image/nycmapbackground.png'
 

@@ -2,12 +2,10 @@ import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import {Card, Button, Form, FormGroup} from "react-bootstrap"
 import moment from 'moment';
-import {decodeEntity} from 'html-entities';
 import Moment from 'react-moment';
 
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import Popup from '../Components/JobPopUp'
-const unescapeUnicode = require('unescape-unicode');
 
 
 export default function Jobs() {
@@ -20,7 +18,7 @@ export default function Jobs() {
     }
 
 function enterDisabler(event){
-  if(event.keyCode == 13) {
+  if(event.keyCode === 13) {
     event.preventDefault();
     return false;
   }
@@ -33,7 +31,6 @@ function moneyConvert(s){
 
 function searchQueryFunction(e){
   e.preventDefault();
-  console.log(e.target.value)
   if (e.target.value.length>=3){
     let results = fulljobs.filter(items=> items.business_title.toLowerCase().includes(e.target.value.toLowerCase()) || items.civil_service_title.toLowerCase().includes(e.target.value.toLowerCase()))
     if (results.length > 0){
@@ -65,7 +62,7 @@ function searchQueryFunction(e){
     
         fetchData();
     }, []);
-if (jobs.length == 0 ){
+if (jobs.length === 0 ){
   return <div> <hr></hr> 
   <h1 className="text-white">Loading...</h1>
       <hr></hr>
@@ -97,7 +94,7 @@ if (jobs.length == 0 ){
    <p>Last updated: <Moment date={job.posting_updated} format="MM/DD/YYYY" /></p>
    <br></br>
    {/* <Popup {...job}></Popup> */}
-   <a href={`https://a127-jobs.nyc.gov/index_new.html?keyword=${job.job_id}`} target="_blank"><Button>More Info</Button></a>
+   <a href={`https://a127-jobs.nyc.gov/index_new.html?keyword=${job.job_id}`} target="_blank" rel="noreferrer"><Button>More Info</Button></a>
    </div></AnimationOnScroll>
   ))}</div>
 </div>;
