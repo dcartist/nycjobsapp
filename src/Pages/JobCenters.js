@@ -36,7 +36,7 @@ unique.push("Clear")
     >
        <div style={{ height: '30vh' }}> <h1>Blur transition from min to max</h1> </div>
     </Parallax>
-    <ul>
+    <ul className="bouroughs-base">
     {unique.map((bourough, index)=><li key={index} onClick={(e)=>findcenters(bourough)} className="bouroughs"><Button>{bourough}</Button></li>)}
         {/* <AnimationOnScroll animateIn="anumate__fadeIn"></AnimationOnScroll> */}
     </ul>

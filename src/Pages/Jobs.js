@@ -49,7 +49,7 @@ function searchQueryFunction(e){
     
         const fetchData = async () => {
           try {
-            axios.get(SomeURL, {headers: {'content-type': 'application/x-www-form-urlencoded;charset=utf-8'}})
+            axios.get(SomeURL)
       .then(res => {
         setfulljobs(res.data);
         setjobs(res.data)
@@ -85,12 +85,14 @@ if (jobs.length === 0 ){
   
   {jobs.map((job, index) => (<AnimationOnScroll animateIn="animate__fadeIn">
    <div className="job-block" key={index}>
-    <div><h3>{capitalizeFirstLetter(job.business_title)}</h3></div>
+   <p className="job-header">{job.business_title}</p>
    
    <hr></hr>
  
    
-   <p>Agency: {job.agency} <br></br> Civil Service title: {job.civil_service_title}<br></br> Salary: ${moneyConvert(job.salary_range_from)} - ${moneyConvert(job.salary_range_to)}</p>
+   <p><p>Agency: <br></br> {job.agency}</p> 
+   
+   <p>Civil Service title:<br></br> {job.civil_service_title}</p>Salary: ${moneyConvert(job.salary_range_from)} - ${moneyConvert(job.salary_range_to)}</p>
    <p>Last updated: <Moment date={job.posting_updated} format="MM/DD/YYYY" /></p>
    <br></br>
    {/* <Popup {...job}></Popup> */}

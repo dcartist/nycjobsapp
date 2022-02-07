@@ -5,11 +5,15 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  min-width: 100%;
+  /* min-width: 100vw; */
   min-height: 100vh;
   background-color: black;
+  /* overflow-x: hidden; */
 }
-
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
 /* code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
