@@ -3,7 +3,7 @@ import nycmap from '../Image/nyc_map.png'
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import dcartist from '../Image/dcartist.jpg'
 export default function About() {
-  return <div> 
+  return <div className="about-base"> 
   <div className="container aboutSections">
         <div className="row align-items-center justify-content-between">
         <div className="col-12 col-md-6 mt-4 ">

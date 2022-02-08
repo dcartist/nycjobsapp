@@ -10,6 +10,16 @@ import {Button} from 'react-bootstrap'
 import nycPhoto from '../Image/nycmapbackground.png'
 
 export default function JobCenters() {
+
+  const insideStyles = {
+    background: "white",
+    padding: 20,
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%,-50%)"
+  };
+
 const [jobcenters, setjobcenters] = useState(data);
 function findcenters(place){
   if (place !== 'Clear'){
@@ -29,24 +39,18 @@ unique.push("Clear")
         bgImageAlt="new york city"
         strength={500}
 
-        style={{
-          backgroundPosition: 'bottom center',
-      }}
-
     >
-       <div style={{ height: '30vh' }}> <h1>Blur transition from min to max</h1> </div>
+       <div className="job-title-base"> <div className="job-title"><h1>Job Centers</h1> <p>A list of Job Centers that provide eligible individuals with temporary financial assistance, SNAP, and Medicaid.</p></div></div>
     </Parallax>
     <ul className="bouroughs-base">
     {unique.map((bourough, index)=><li key={index} onClick={(e)=>findcenters(bourough)} className="bouroughs"><Button>{bourough}</Button></li>)}
         {/* <AnimationOnScroll animateIn="anumate__fadeIn"></AnimationOnScroll> */}
     </ul>
-        {/* <AnimationOnScroll animateIn="anumate__fadeIn"></AnimationOnScroll> */}
         <AnimationOnScroll animateIn="animate__fadeIn">
           <div className="job-center-base">
           {jobcenters.map(item=> <div>
-          {/* <Mapalt {...item}></Mapalt> */}
-    <h2 className="text-white">{item.facility_name}</h2>
-    {item.nta}
+    <h2 className="text-white text-larger">{item.facility_name}</h2>
+    <span>{item.nta}</span>
        <p>{item.street_address}<br></br>{item.city}, {item.zip_code}</p>
        <hr></hr>
             <p>{item.phone_number_s}</p>
@@ -55,6 +59,5 @@ unique.push("Clear")
   
   </AnimationOnScroll>
   
-  {/* <JobsMapped data={jobcenters} {...jobcenters}></JobsMapped> */}
   </div>;
 }

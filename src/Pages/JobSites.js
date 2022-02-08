@@ -6,6 +6,10 @@ import {LineLayer} from '@deck.gl/layers';
 import {MapView, FirstPersonView} from '@deck.gl/core';
 import {StaticMap} from 'react-map-gl';
 import Pins from '../Components/Pins'
+
+import { Parallax, Background } from 'react-parallax';
+import { AnimationOnScroll } from 'react-animation-on-scroll';
+import nycPhoto from '../Image/nycmapbackground.png'
 // Viewport settings
 const INITIAL_VIEW_STATE = {
   longitude:-73.935242,
@@ -34,6 +38,15 @@ export default function JobSites() {
     new LineLayer({id: 'line-layer', data})
   ];
   return <div>
+     <Parallax
+        blur={{ min: -10, max: 9 }}
+        bgImage={nycPhoto}
+        bgImageAlt="new york city"
+        strength={500}
+
+    >
+       <div className="job-title-base"> <div className="job-title"><h1>Job Centers</h1> <p>A list of Job Centers that provide eligible individuals with temporary financial assistance, SNAP, and Medicaid.</p></div></div>
+    </Parallax>
     {/* <div>  <DeckGL
       initialViewState={INITIAL_VIEW_STATE}
       controller={false}

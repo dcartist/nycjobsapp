@@ -4,6 +4,8 @@ import {Card, Button, Form, FormGroup} from "react-bootstrap"
 import moment from 'moment';
 import Moment from 'react-moment';
 
+import nycPhoto from '../Image/nycmapbackground.png'
+import { Parallax, Background } from 'react-parallax';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import Popup from '../Components/JobPopUp'
 
@@ -12,7 +14,8 @@ export default function Jobs() {
     const [jobs, setjobs] = useState([]);
     const [fulljobs, setfulljobs] = useState([]);
     const [searchQuery, setsearchQuery] = useState('');
-    
+    const lastUpdated = Date.now();
+
     function capitalizeFirstLetter(s) {
       return s && s[0].toUpperCase() + s.slice(1);
     }
@@ -63,20 +66,42 @@ function searchQueryFunction(e){
         fetchData();
     }, []);
 if (jobs.length === 0 ){
-  return <div> <hr></hr> 
+  return <div>  <Parallax
+  blur={{ min: -10, max: 9 }}
+  bgImage={nycPhoto}
+  bgImageAlt="new york city"
+  strength={500}
+
+>
+ <div className="job-title-base"> <div className="job-title"><h1>Job Listing</h1> <p>This section contains the most recent (updated <Moment format="MM/DD/YYYY">
+                {lastUpdated}
+            </Moment>)  job postings from the City of New York's official jobs site.</p></div></div>
+</Parallax><hr></hr> 
   <h1 className="text-white">Loading...</h1>
       <hr></hr>
   </div>;
 
 } else {
   
-  return <div> <hr></hr> <h1 className="dark text-white">JOB LISTING</h1>
+  return <div> 
+         <Parallax
+        blur={{ min: -10, max: 9 }}
+        bgImage={nycPhoto}
+        bgImageAlt="new york city"
+        strength={500}
+
+    >
+       <div className="job-title-base"> <div className="job-title"><h1>Job Listing</h1> <p>This section contains the most recent (updated <Moment format="MM/DD/YYYY">
+                {lastUpdated}
+            </Moment>)  job postings from the City of New York's official jobs site.</p></div></div>
+    </Parallax>
+
   <hr></hr>
   <Form>
    <Form.Group className="mb-3" controlId="formBasicEmail">
-    <Form.Label>Search by job title</Form.Label>
-    <Form.Control size="lg" type="text" placeholder="Search Job Title" onChange={e => searchQueryFunction(e)} onKeyDown={e => enterDisabler(e)}  />
-    <Form.Text className="text-muted">
+    <h5 className="text-white">Search by job title</h5>
+    <Form.Control size="lg" type="text" placeholder="Search Job Title Here..." onChange={e => searchQueryFunction(e)} onKeyDown={e => enterDisabler(e)}  />
+    <Form.Text className="text-white">
       {jobs.length} results
     </Form.Text>
   </Form.Group>
@@ -85,18 +110,15 @@ if (jobs.length === 0 ){
   
   {jobs.map((job, index) => (<AnimationOnScroll animateIn="animate__fadeIn">
    <div className="job-block" key={index}>
-   <p className="job-header">{job.business_title}</p>
-   
    <hr></hr>
- 
-   
+   <p className="job-header">{job.business_title}</p>
+   <hr></hr>
    <p><p>Agency: <br></br> {job.agency}</p> 
-   
    <p>Civil Service title:<br></br> {job.civil_service_title}</p>Salary: ${moneyConvert(job.salary_range_from)} - ${moneyConvert(job.salary_range_to)}</p>
    <p>Last updated: <Moment date={job.posting_updated} format="MM/DD/YYYY" /></p>
    <br></br>
    {/* <Popup {...job}></Popup> */}
-   <a href={`https://a127-jobs.nyc.gov/index_new.html?keyword=${job.job_id}`} target="_blank" rel="noreferrer"><Button>More Info</Button></a>
+   <a href={`https://a127-jobs.nyc.gov/index_new.html?keyword=${job.job_id}`} target="_blank" rel="noreferrer"><Button variant="danger">More Info</Button></a>
    </div></AnimationOnScroll>
   ))}</div>
 </div>;
