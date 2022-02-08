@@ -11,7 +11,7 @@ export default function About() {
         <div className="row align-items-center justify-content-between">
         <div className="col-12 col-md-6 mt-4 ">
           <AnimationOnScroll animateIn="animate__bounceIn" delay={400}>
-            <img alt="image" className="img-fluid d-block mx-auto"
+            <img alt="nyc map" className="img-fluid d-block mx-auto"
               src={nycmap}/>
               </AnimationOnScroll>
           </div>
@@ -81,7 +81,7 @@ export default function About() {
             </div>
           </div>
           <div className="col-12 col-md-5 mt-4 mt-md-0">
-            <img alt="image"
+            <img alt="Paula Bannerman a.k.a DCartist"
               className="img-fluid mx-auto d-block mb-md-0 mt-md-0 mb-2 mt-2"
               src={dcartist}/>
           </div>

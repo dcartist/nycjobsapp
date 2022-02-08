@@ -1,25 +1,17 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
-import {Card, Button, Form, FormGroup} from "react-bootstrap"
-import moment from 'moment';
+import {Button, Form} from "react-bootstrap"
 import Moment from 'react-moment';
-
+import { Parallax } from 'react-parallax';
+import { BiLinkExternal } from 'react-icons/bi';
 import nycPhoto from '../Image/nycmapbackground.png'
-import { Parallax, Background } from 'react-parallax';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
-import Popup from '../Components/JobPopUp'
-
-import { BiLinkExternal } from 'react-icons/bi'
 
 export default function Jobs() {
     const [jobs, setjobs] = useState([]);
     const [fulljobs, setfulljobs] = useState([]);
-    const [searchQuery, setsearchQuery] = useState('');
     const lastUpdated = Date.now();
 
-    function capitalizeFirstLetter(s) {
-      return s && s[0].toUpperCase() + s.slice(1);
-    }
 
 function enterDisabler(event){
   if(event.keyCode === 13) {

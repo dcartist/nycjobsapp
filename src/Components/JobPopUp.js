@@ -2,7 +2,6 @@ import React,  { useState } from 'react';
 import {Button, Modal} from 'react-bootstrap';
 export default function JobPopUp(props) {
 const [show, setShow] = useState(false);
-// import parse from 'html-react-parser';
 const parse = require('html-react-parser');
 
   const handleClose = () => setShow(false);

@@ -1,9 +1,7 @@
 import React, {useState} from 'react';
 import data from '../data.json'
 import Popup from '../Components/Popup'
-
-import Mapalt from "../Components/Mapalt"
-import { Parallax, Background } from 'react-parallax';
+import { Parallax} from 'react-parallax';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import {Button} from 'react-bootstrap'
 

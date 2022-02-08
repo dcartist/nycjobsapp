@@ -1,6 +1,5 @@
 import React from 'react';
-import About from './About'
-import { Parallax, Background } from 'react-parallax';
+import { Parallax} from 'react-parallax';
 import { Link } from 'react-router-dom'
 import { Button } from 'react-bootstrap'
 import nycPhoto from '../Image/manhattan-sunset-nyc-2021-08-26-23-04-25-utc_resize.jpg'
@@ -9,7 +8,6 @@ import joblistingphoto from '../Image/new-york-2021-08-26-17-19-55-utc_resize.jp
 import Moment from 'react-moment';
 
 import { AnimationOnScroll } from 'react-animation-on-scroll';
-// import nycPhoto from '../Image/nycmap.png'
 export default function Home() {
 
   const lastUpdated = Date.now();
@@ -39,7 +37,7 @@ export default function Home() {
       <div className="container-fluid p-0">
         <div className="row no-gutters">
          
-          <a className="card p-0 m-0 col-md-6  text-white  border-0 ">
+          <div className="card p-0 m-0 col-md-6  text-white  border-0 ">
             <img className="card-img h-100 shadow"
               src={jobcenterphoto}
               alt="NYC job centers. Photo of taxi cabs."/>
@@ -66,7 +64,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          </a>
+          </div>
           <div className="card p-0 m-0 col-md-6  text-white  border-0 ">
             <img className="card-img h-100 shadow"
               src={joblistingphoto}

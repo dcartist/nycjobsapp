@@ -1,8 +1,6 @@
 import React from 'react';
-import {Navbar, Button, Container, NavDropdown, Nav} from 'react-bootstrap'
-import {Link} from 'react-router-dom'
+import {Navbar, Container, Nav} from 'react-bootstrap'
 import { LinkContainer } from 'react-router-bootstrap'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {AiFillGithub, AiOutlineMail} from 'react-icons/ai'
 import {BiWorld} from 'react-icons/bi'
 
