@@ -28,8 +28,10 @@ export default function Home() {
 
     >
         
+<AnimationOnScroll animateIn="animate__fadeIn">
         <div className="home-intro"><div className="home-base"> <p className="display-1">NYC JOBS 22</p> <p>Helping those in need of jobs and financial aid in the New York City Area</p> </div>
         </div>
+        </AnimationOnScroll>
     </Parallax>
     </AnimationOnScroll>
     
