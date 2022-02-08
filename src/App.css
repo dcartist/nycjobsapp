@@ -15,7 +15,7 @@
   display: flex;
   justify-content: center;
   text-align: center;
-  min-height: 80vh;
+  min-height: 86vh;
   flex-direction: column;
 }
 
@@ -222,13 +222,13 @@ a.about-link {
 
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-width: 320px) and (max-width: 600px) {
+
+  .home-intro{
+  min-height: 70vh;
+  }
   .job-center-base {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    /* margin: auto;
-    width:100%;
-    column-gap: 50px;
-    row-gap: 90px; */
     justify-content: center;
     padding: 30px 30px 100px;
   }
