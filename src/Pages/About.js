@@ -18,7 +18,7 @@ export default function About() {
           <div className="col-12 col-md-5 pb-5 ">
           <AnimationOnScroll animateIn="animate__fadeIn" delay={100}>
             <h1 className="  text-white mb-3 mt-5">About</h1>
-            <p className="lead text-white">NYC Jobs 22 is a website built for the developer week hackathon to display jobs and other related sources using New York City Open Data.</p>
+            <p className="lead text-white">NYC Jobs 22 is a website built for the developer week hackathon to display jobs and other related resources using New York City Open Data.</p>
 
               <hr></hr>
             <h2 className="lead text-white"> NYC Jobs Centers</h2>
