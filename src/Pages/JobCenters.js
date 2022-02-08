@@ -48,7 +48,7 @@ unique.push("Clear")
     </ul>
         <AnimationOnScroll animateIn="animate__fadeIn">
           <div className="job-center-base">
-          {jobcenters.map(item=> <div>
+          {jobcenters.map((item, index)=> <div key={index}>
     <h2 className="text-white text-larger">{item.facility_name}</h2>
     <span>{item.nta}</span>
        <p>{item.street_address}<br></br>{item.city}, {item.zip_code}</p>

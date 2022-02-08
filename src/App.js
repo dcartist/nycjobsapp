@@ -30,30 +30,14 @@ function App() {
   return (
     <div className="App">
     <Navbar></Navbar>
-  
     <Routes>
-      {/* <Route path="/" element={<App />}> */}
         <Route index element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/" element={<Home />} />
           <Route path="/centers" element={<JobCenters />} />
           <Route path="/jobs" element={<JobList />} />
-        {/* <Route path="teams" element={<Teams />}>
-          <Route path=":teamId" element={<Team />} />
-          <Route index element={<LeagueStandings />} />
-        </Route> */}
-      {/* </Route> */}
     </Routes>
-   {/* <AnimationOnScroll animateIn="animate__fadeIn">
-      <div className="mainMap"><ReactMap></ReactMap></div>
-      </AnimationOnScroll> */}
-   {/* {process.env.REACT_APP_TRIAL} */}
-  
-{/* <JobSites></JobSites> */}
-{/* <Jobs></Jobs> */}
-{/* <AnimationOnScroll animateIn="animate__fadeIn"><About></About></AnimationOnScroll> */}
-      
-      {/* <AnimationOnScroll animateIn="animate__fadeIn">{data.map(item=> <Popup data={item}></Popup>)}</AnimationOnScroll> */}
+
     
     </div>
   );

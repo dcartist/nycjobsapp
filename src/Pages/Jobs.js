@@ -9,6 +9,7 @@ import { Parallax, Background } from 'react-parallax';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import Popup from '../Components/JobPopUp'
 
+import { BiLinkExternal } from 'react-icons/bi'
 
 export default function Jobs() {
     const [jobs, setjobs] = useState([]);
@@ -117,8 +118,7 @@ if (jobs.length === 0 ){
    <p>Civil Service title:<br></br> {job.civil_service_title}</p>Salary: ${moneyConvert(job.salary_range_from)} - ${moneyConvert(job.salary_range_to)}</p>
    <p>Last updated: <Moment date={job.posting_updated} format="MM/DD/YYYY" /></p>
    <br></br>
-   {/* <Popup {...job}></Popup> */}
-   <a href={`https://a127-jobs.nyc.gov/index_new.html?keyword=${job.job_id}`} target="_blank" rel="noreferrer"><Button variant="danger">More Info</Button></a>
+   <a href={`https://a127-jobs.nyc.gov/index_new.html?keyword=${job.job_id}`} target="_blank" rel="noreferrer"><Button variant="danger">More Info <BiLinkExternal></BiLinkExternal></Button></a>
    </div></AnimationOnScroll>
   ))}</div>
 </div>;

@@ -21,9 +21,9 @@ export default function Navigation() {
   
     </Nav>
     <Nav>
-      <Nav.Link href="#deets"><BiWorld className="icon-nav" ></BiWorld></Nav.Link>
-      <Nav.Link href="#deets"><AiFillGithub className="icon-nav"></AiFillGithub></Nav.Link>
-      <Nav.Link eventKey={2} href="#memes">
+      <Nav.Link href="https://www.dcartist.com" target="_blank" rel="noreferrer"><BiWorld className="icon-nav" ></BiWorld></Nav.Link>
+      <Nav.Link href="https://github.com/dcartist/nycjobsapp" target="_blank" rel="noreferrer"><AiFillGithub className="icon-nav"></AiFillGithub></Nav.Link>
+      <Nav.Link eventKey={2} href="mailto:Pbannerman13@gmail.com">
         <AiOutlineMail className="icon-nav"></AiOutlineMail>
       </Nav.Link>
     </Nav>
