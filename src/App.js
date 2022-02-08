@@ -12,10 +12,9 @@ import {
 
 import About from './Pages/About'
 import JobCenters from './Pages/JobCenters'
+
 function App() {
   
-  // console.log(data)
-
   return (
     <div className="App">
     <Navbar></Navbar>

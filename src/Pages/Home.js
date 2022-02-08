@@ -10,6 +10,7 @@ import Moment from 'react-moment';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 export default function Home() {
 
+  
   const lastUpdated = Date.now();
   return <div>
 
