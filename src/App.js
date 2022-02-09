@@ -14,7 +14,8 @@ import About from './Pages/About'
 import JobCenters from './Pages/JobCenters'
 
 function App() {
-  
+  console.log = function() {}
+
   return (
     <div className="App">
     <Navbar></Navbar>
